@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "get": "node scripts/get",
+    "all": "node scripts/run-all-problems",
+    "stats": "node scripts/stats"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
