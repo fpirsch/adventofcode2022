@@ -15,7 +15,7 @@ If you want to use the downloading tool `npm run get`, you will have to provide 
 
 # Solutions
 
-Each `day*` folder contains my input, some example data automatically extracted from the problem page, and the code of my solution.
+Each `day<n>` folder contains my input, some example data automatically extracted from the problem page, and the code of my solution.
 
 ```bash
 % node day1
@@ -30,7 +30,7 @@ Each day during the challenge, you can run the command
 `npm run get`
 
 It will create the appropriate folder, an `index.js` file to start to code quickly, download your input of the day and save it to an `input.txt` file.
-It will also scrape example data blocks on the problem page, and save them locally in a bunch of `data*.txt` files.
+It will also scrape example data blocks on the problem page, and save them locally in a bunch of `data<n>.txt` files.
 
 The lib has some functions to read the input data locally.
 
@@ -53,3 +53,4 @@ If you want to keep the fun and get all of the 50 stars,
 
 - keep your code short. The shorter your solution, the less code you write, the less code you debug, the faster you get that solution.
 - try to keep up, don't skip days. You won't come back to solve them later, so a skipped day means 2 stars lost.
+- know your language and your libs. This saves a lot of time. You may not use lodash's `zip`or `chunk` functions often, but they can make a lot of difference.
