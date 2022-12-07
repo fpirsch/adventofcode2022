@@ -1,3 +1,8 @@
+// My personal advent of code lib. Will probably evolve a lot.
+// Globals, prototype pollution... Don't do this on production code.
+// It's perfect for one-shot custom personal code like this, tho.
+// We want to go fast, not to go far.
+
 import fs from 'fs'
 
 const dayDir = () => process.argv[1].match(/.+?\/day\d+/)[0]
