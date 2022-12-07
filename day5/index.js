@@ -4,14 +4,9 @@ import * as _ from 'lodash-es'
 const [stackDesc, moves] = readParagraphs()
 
 stackDesc.reverse()
-const stackCount = Math.ceil(stackDesc.shift().length / 4)
-const stacks = Array.from({ length: stackCount }, () => [])
-stackDesc.forEach((line) =>
-  stacks.forEach((stack, i) => {
-    const item = line[1 + 4 * i]
-    if (item !== ' ') stack.push(item)
-  })
-)
+const stacks = _.zip(...stackDesc.mapSplit(''))
+  .filter((row) => row[0] !== ' ')
+  .map((row) => row.filter((crate) => crate >= 'A'))
 
 const stacksClone = _.cloneDeep(stacks)
 moves.map(matchNumbers).forEach(([count, from, to]) => {
