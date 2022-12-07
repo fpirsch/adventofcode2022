@@ -7,7 +7,7 @@ I've been doing the [advent of code](https://adventofcode.com/) for a few years 
 
 `npm install`
 
-If you want to use the downloading tool `npm run get`, you will have to provide your session cookie.
+If you want to use the downloading tool `npm run get`, you will have to provide your session cookie:
 
 1. Log in to https://adventofcode.com/2022 with your browser
 2. Use the dev tools to copy the value of the session cookie (a 128-char hex code, don't copy the quotes if any)
@@ -15,7 +15,7 @@ If you want to use the downloading tool `npm run get`, you will have to provide 
 
 # Solutions
 
-Each `day*` folder contains my input, some code automatically extracted from the problem page, and the code of my solution.
+Each `day*` folder contains my input, some example data automatically extracted from the problem page, and the code of my solution.
 
 ```bash
 % node day1
@@ -30,12 +30,12 @@ Each day during the challenge, you can run the command
 `npm run get`
 
 It will create the appropriate folder, an `index.js` file to start to code quickly, download your input of the day and save it to an `input.txt` file.
-It will also scrape example code blocks on the problem page, and save them locally in a bunch of `code*.txt` files.
+It will also scrape example data blocks on the problem page, and save them locally in a bunch of `datae*.txt` files.
 
 The lib has some functions to read the input data locally.
 
 `readLines()` reads `input.txt` and returns its content as an array of strings.
-`readLines('code1')` reads `code1.txt`, the 1st code example from the problem page.
+`readLines('data1')` reads `data1.txt`, the 1st code example from the problem page.
 
 # What library should you use ?
 

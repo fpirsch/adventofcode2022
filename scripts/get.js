@@ -47,7 +47,9 @@ const res = await fetch(url, fetchOptions)
 assert(res.status === 200)
 assert(res.headers.get('content-type') === 'text/html')
 const html = await res.text()
-const codes = html
+const dataBlocks = html
   .match(/<pre><code>[^<]+<\/code><\/pre>/g)
   .map((code) => code.slice(11, -13))
-codes.forEach((code, i) => fs.writeFileSync(`${dir}/code${i + 1}.txt`, code))
+dataBlocks.forEach((data, i) =>
+  fs.writeFileSync(`${dir}/data${i + 1}.txt`, data)
+)
