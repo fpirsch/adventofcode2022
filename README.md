@@ -30,11 +30,12 @@ Each day during the challenge, you can run the command
 `npm run get`
 
 It will create the appropriate folder, an `index.js` file to start to code quickly, download your input of the day and save it to an `input.txt` file.
-It will also scrape example data blocks on the problem page, and save them locally in a bunch of `datae*.txt` files.
+It will also scrape example data blocks on the problem page, and save them locally in a bunch of `data*.txt` files.
 
 The lib has some functions to read the input data locally.
 
 `readLines()` reads `input.txt` and returns its content as an array of strings.
+
 `readLines('data1')` reads `data1.txt`, the 1st code example from the problem page.
 
 # What library should you use ?
@@ -43,7 +44,7 @@ One that you know well. You don't want to spend your time reading docs.
 
 A good lib matters in this event, especially if you choose JS as your language, if you want to spend your time actually solving the problems instead of writing trivial things that already exist.
 
-JS doesn't have a good standard library for algorithmics and data structures, like e.g. Python has. [Lodash](https://lodash.com/) does a pretty good job, so I went with it, and added my own super small library [lib.js](./lib.js) with functions I use often. Some of those functions are generic, some are very specific to the advent of code.
+JS doesn't have a good standard library for algorithmics and data structures, like e.g. Python has. [Lodash](https://lodash.com/) does a pretty good job, so I went with it, and added my own super small library, with some generic functions, and some very specific to the advent of code.
 
 # Tips
 
