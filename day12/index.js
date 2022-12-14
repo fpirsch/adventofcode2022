@@ -1,7 +1,9 @@
 import * as _ from 'lodash-es'
 import { Board } from './1dboard.js'
 
-const map = new Board(readInput(), '{') // surrounding wall : "{" is above z in ascii
+// surrounding wall : "{" is above z in ascii
+const map = Board.fromInput(readInput()).border('{')
+
 const start = map.data.indexOf('S')
 const end = map.data.indexOf('E')
 map.data[start] = 'a'
