@@ -13,5 +13,6 @@ async function runDay(dirname) {
 const days = fs
   .readdirSync(new URL('..', import.meta.url))
   .filter((dir) => dir.startsWith('day'))
+  .sort((a, b) => a.slice(3) - b.slice(3))
 
 for (const dirname of days) await runDay(dirname)

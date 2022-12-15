@@ -20,4 +20,5 @@ declare global {
   function sum(list: (string | number)[]): number
   function asc(a: any, b: any): 1 | 0 | -1
   function desc(a: any, b: any): 1 | 0 | -1
+  function manhattan(x1: number, y1: number, x2: number, y2: number): number
 }
