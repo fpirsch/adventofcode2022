@@ -5,6 +5,7 @@
 
 import fs from 'fs'
 
+const file = process.argv[2] ?? 'input'
 const dayDir = () => process.argv[1].match(/.+?\/day\d+/)[0]
 
 let startTime
@@ -26,11 +27,11 @@ Array.prototype.mapSplit = function (sep = ' ') {
 global.matchPositiveNumbers = (str) => str.match(/[.\d]+/g).map((x) => +x)
 global.matchNumbers = (str) => str.match(/-?[.\d]+/g).map((x) => +x)
 
-global.readInput = (file = 'input') =>
+global.readInput = () =>
   String(fs.readFileSync(`${dayDir()}/${file}.txt`)).trimEnd(start())
-global.readLines = (file) => readInput(file).split('\n')
-global.readParagraphs = (file) => readInput(file).split('\n\n').mapSplit('\n')
-global.readNumbers = (file) => readLines(file).map(Number)
+global.readLines = () => readInput(file).split('\n')
+global.readParagraphs = () => readInput(file).split('\n\n').mapSplit('\n')
+global.readNumbers = () => readLines(file).map(Number)
 
 global.sum = (list) => list.reduce((a, b) => a + +b, 0)
 global.asc = (a, b) => a - b

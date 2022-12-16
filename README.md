@@ -23,6 +23,14 @@ star 1: 12345 (0ms)
 star 2: 123456 (3ms)
 ```
 
+Same but reads example input in the `data1.txt` file instead of `input.txt`
+
+```bash
+% node day1 data1
+star 1: 1234 (0ms)
+star 2: 12345 (3ms)
+```
+
 # Automatic coding template setup
 
 Each day during the challenge, you can run the command
@@ -34,9 +42,7 @@ It will also scrape example data blocks on the problem page, and save them local
 
 The lib has some functions to read the input data locally.
 
-`readLines()` reads `input.txt` and returns its content as an array of strings.
-
-`readLines('data1')` reads `data1.txt`, the 1st code example from the problem page.
+`readLines()` reads the input file and returns its content as an array of strings.
 
 # What library should you use ?
 
