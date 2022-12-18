@@ -42,6 +42,9 @@ if (!fs.existsSync(dir)) {
   )
 }
 
+const htmlEntities = (str) =>
+  str.replaceAll('&lt;', '<').replaceAll('&gt;', '>')
+
 // 1st run: writes part 1 code samples, 2nd run: write all code samples
 const res = await fetch(url, fetchOptions)
 assert(res.status === 200)
@@ -49,7 +52,7 @@ assert(res.headers.get('content-type') === 'text/html')
 const html = await res.text()
 const dataBlocks = html
   .match(/<pre><code>[^<]+<\/code><\/pre>/g)
-  .map((code) => code.slice(11, -13))
+  .map((code) => htmlEntities(code.slice(11, -13)))
 dataBlocks.forEach((data, i) =>
   fs.writeFileSync(`${dir}/data${i + 1}.txt`, data)
 )
