@@ -37,3 +37,4 @@ global.sum = (list) => list.reduce((a, b) => a + +b, 0)
 global.asc = (a, b) => a - b
 global.desc = (a, b) => b - a
 global.manhattan = (x1, y1, x2, y2) => Math.abs(x2 - x1) + Math.abs(y2 - y1)
+global.minmax = (list) => [Math.min(...list), Math.max(...list)]
