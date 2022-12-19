@@ -24,8 +24,8 @@ Array.prototype.mapSplit = function (sep = ' ') {
   return this.map((str) => str.split(sep))
 }
 
-global.matchPositiveNumbers = (str) => str.match(/[.\d]+/g).map((x) => +x)
-global.matchNumbers = (str) => str.match(/-?[.\d]+/g).map((x) => +x)
+global.matchPositiveNumbers = (str) => str.match(/\d+/g).map((x) => +x)
+global.matchNumbers = (str) => str.match(/-?\d+/g).map((x) => +x)
 
 global.readInput = () =>
   String(fs.readFileSync(`${dayDir()}/${file}.txt`)).trimEnd(start())
