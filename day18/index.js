@@ -1,5 +1,4 @@
 import '../lib.js'
-import * as _ from 'lodash-es'
 
 const lines = readLines()
 const cubes = lines.map(matchPositiveNumbers)
@@ -8,8 +7,8 @@ const faces = new Set()
 
 function addFace(x, y, z) {
   const key = x * 10000 + y * 100 + z
-  if (faces.has(key)) faces.delete(key) // 2 cubes with the same face
-  else faces.add(key)
+  // toggles key (2 occurrences = not in contact with air)
+  faces.delete(key) || faces.add(key)
 }
 
 function addCubeFaces(x, y, z) {
