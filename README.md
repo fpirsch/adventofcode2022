@@ -5,7 +5,7 @@ I've been doing the [advent of code](https://adventofcode.com/) for a few years 
 
 This year we have some games like [snake](day9), [tetris](day17) and [resource management](day19),
 [ascii art](day10), [shortest](day12) [paths](day16) and [backtracking](day16), [sand-pouring](day14) and [3D-floodfill](day18).
-There is also the dreaded [cube-folding](day22).
+There is also the dreaded [cube-folding](day22). And a [pathfinding problem in a moving maze](day24)
 
 # Installation
 
